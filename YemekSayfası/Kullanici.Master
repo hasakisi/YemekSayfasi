@@ -11,18 +11,21 @@
         .auto-style1 {
             width: 100%;
         }
+
         .auto-style2 {
             text-align: center;
         }
+        .auto-style3 {
+            font-size: large;
+        }
     </style>
 </head>
-<body >
+<body>
     <form id="form1" runat="server">
-        <div style="height: 150px; width: 700px; margin-left:300px; background-color: #99CCFF;">
-            
+        <div style="height: 150px; width: 700px; margin-left: 300px; background-color: #99CCFF;">
         </div>
-        <div style="margin-left:300px; width:700px; height:20px;"></div>
-        <div style="margin-left:300px; width:700px; height:30px; background-color: #CC99FF;">
+        <div style="margin-left: 300px; width: 700px; height: 20px;"></div>
+        <div style="margin-left: 300px; width: 700px; height: 30px; background-color: #CC99FF;">
             <table class="auto-style1">
                 <tr>
                     <td class="auto-style2"><a href="Anasayfa.aspx">ANASAYFA</a></td>
@@ -33,21 +36,41 @@
                 </tr>
             </table>
         </div>
-        <div style="margin-left:300px; width:700px; height:20px;"></div>
+        <div style="margin-left: 300px; width: 700px; height: 20px;"></div>
+        <div style="margin-left: 300px; width: 700px; height: 300px;">
 
-        <div style="margin-left:300px; width:200px; height:200px; background-color: #99FF99;">
-            <div style="margin-left:250px; width:450px; height:350px; background-color: #FF66CC;">
-                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-                    </asp:ContentPlaceHolder>
+            <div style="width: 200px; float: left; height: auto; background-color: #ce7171;">
+                <strong><span class="auto-style3">Kategoriler</span></strong><br />
+                <br />
+                <asp:DataList ID="DataList1" runat="server" Width="196px">
+                    <ItemTemplate>
+                        <div style="border: thin solid #CCCCCC">
+                            <asp:Label ID="Label1" runat="server" Text='<%# Eval("KategoriAd") %>'></asp:Label>
+                            &nbsp;(<asp:Label ID="Label2" runat="server" Text='<%# Eval("KategoriAdet") %>'></asp:Label>
+                            )</div>
+                    </ItemTemplate>
+                </asp:DataList>
             </div>
+
+            <div style="width: 400px; height: 300px; background-color: #ce7171; margin-left: 300px;">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+
+
 
         </div>
 
 
 
+
+
+
     </form>
+    <p>
+        &nbsp;&nbsp;&nbsp;
+    </p>
 </body>
 </html>
 
-<%--<asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-</asp:ContentPlaceHolder>--%>
+
