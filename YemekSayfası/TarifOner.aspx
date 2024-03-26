@@ -63,7 +63,7 @@
         <tr>
             <td class="auto-style4">&nbsp;</td>
             <td class="auto-style2">
-                <asp:Button ID="BtnTarifOner" runat="server" Height="38px" Text="Tarif Öner" Width="173px" />
+                <asp:Button ID="BtnTarifOner" runat="server" Height="38px" Text="Tarif Öner" Width="173px" OnClick="BtnTarifOner_Click" />
             </td>
         </tr>
     </table>
