@@ -34,5 +34,19 @@ namespace YemekSayfası
             DataList2.DataBind();
 
         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            SqlCommand command = new SqlCommand("INSERT INTO Yorumlar (YorumAdSoyad,YorumMail,Yorumicerik,Yemekid) VALUES (@p1,@p2,@p3,@p4)", sqlbaglantisi.baglanti());
+            command.Parameters.AddWithValue("@p1", TextBox1.Text);
+            command.Parameters.AddWithValue("@p2", TextBox2.Text);
+            command.Parameters.AddWithValue("@p3", TextBox3.Text);
+            command.Parameters.AddWithValue("@p4", yemekid);
+
+            command.ExecuteNonQuery();
+            sqlbaglantisi.baglanti().Close();
+
+
+        }
     }
 }

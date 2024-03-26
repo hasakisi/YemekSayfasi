@@ -35,4 +35,39 @@
             </table>
         </ItemTemplate>
     </asp:DataList>
+
+    <div>Yorum Yap!</div>
+    <asp:Panel ID="Panel1" runat="server">
+        <table class="auto-style8">
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>Ad Soyad: </td>
+                <td>
+                    <asp:TextBox ID="TextBox1" runat="server" Width="211px"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td>Mail:</td>
+                <td>
+                    <asp:TextBox ID="TextBox2" runat="server" Width="214px"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td>Yorumunuz:</td>
+                <td>
+                    <asp:TextBox ID="TextBox3" runat="server" TextMode="MultiLine"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>
+                    <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Yorum Yap" />
+                </td>
+            </tr>
+        </table>
+    </asp:Panel>
+
 </asp:Content>
