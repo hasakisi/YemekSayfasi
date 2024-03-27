@@ -31,7 +31,7 @@ namespace YemekSayfası
             cmd2.Parameters.AddWithValue("@p2", yemekid);
             SqlDataReader reader2 = cmd2.ExecuteReader();
             DataList2.DataSource = reader2;
-            DataList2.DataBind();
+            DataList2.DataBind(); 
 
         }
 
