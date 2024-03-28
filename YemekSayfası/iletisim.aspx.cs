@@ -26,7 +26,7 @@ namespace YemekSayfası
             command.Parameters.AddWithValue("@p4", txtmesaj.Text);
             command.ExecuteNonQuery();
             conn.baglanti().Close();
-
+             
         }
     }
 }
