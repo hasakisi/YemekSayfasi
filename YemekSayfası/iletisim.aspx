@@ -61,7 +61,7 @@
     <tr>
         <td class="auto-style8">&nbsp;</td>
         <td class="auto-style10">
-            <asp:Button ID="btngonder" runat="server" Text="Gönder" Width="234px" CssClass="fb8" />
+            <asp:Button ID="btngonder" runat="server" Text="Gönder" Width="234px" CssClass="fb8" OnClick="btngonder_Click" />
         </td>
     </tr>
 </table>
