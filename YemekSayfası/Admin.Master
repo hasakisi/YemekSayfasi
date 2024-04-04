@@ -14,6 +14,10 @@
         .auto-style1 {
             width: 100%;
         }
+        .auto-style2 {
+            font-size: large;
+            color: #FFFFFF;
+        }
     </style>
 </head>
 <body>
@@ -24,40 +28,40 @@
         <div style="margin-left: 300px; width: 700px; height: 20px;"></div>
         <div style="margin-left: 300px; width: 700px; height: auto;">
 
-            <div style="width: 200px; float: left; height: auto; background-color: #ce7171;">
-                <table class="auto-style1">
+            <div style="width: 200px; float: left; height: auto; background-color: #003399;">
+                <table class="auto-style1" style="background-color: #00FFFF">
                     <tr>
-                        <td>Menüler</td>
+                        <td style="background-color: #003399" class="auto-style2">Menüler</td>
                     </tr>
                     <tr>
-                        <td>&nbsp;</td>
+                        <td style="background-color: #003399" class="auto-style2">&nbsp;</td>
                     </tr>
                     <tr>
-                        <td>Kategoriler</td>
+                        <td style="background-color: #003399" class="auto-style2"><a href="Kategoriler.aspx">Kategoriler</a></td>
                     </tr>
                     <tr>
-                        <td>Yemekler</td>
+                        <td style="background-color: #003399" class="auto-style2">Yemekler</td>
                     </tr>
                     <tr>
-                        <td>Yorumlar</td>
+                        <td style="background-color: #003399" class="auto-style2">Yorumlar</td>
                     </tr>
                     <tr>
-                        <td>Mesajlar</td>
+                        <td style="background-color: #003399" class="auto-style2">Mesajlar</td>
                     </tr>
                     <tr>
-                        <td>Günün Yemeği</td>
+                        <td style="background-color: #003399" class="auto-style2">Günün Yemeği</td>
                     </tr>
                     <tr>
-                        <td>Öneriler</td>
+                        <td style="background-color: #003399" class="auto-style2">Öneriler</td>
                     </tr>
                     <tr>
-                        <td>Hakkımızda</td>
+                        <td style="background-color: #003399" class="auto-style2">Hakkımızda</td>
                     </tr>
                 </table>
                 <br />
             </div>
 
-            <div style="width: 400px; height: auto; background-color: #ce7171; margin-left: 300px;">
+            <div style="width: 400px; height: auto; background-color: #000099; margin-left: 300px;">
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                 </asp:ContentPlaceHolder>
             </div>

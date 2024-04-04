@@ -107,8 +107,11 @@
     <Content Include="GununYemegi.aspx" />
     <Content Include="Hakkimizda.aspx" />
     <Content Include="Header\traditional-thanksgiving-turkey-dinner-above-260nw-1832845288.jpg" />
+    <Content Include="icons\update.png" />
+    <Content Include="icons\delete.png" />
     <Content Include="iletisim.aspx" />
     <Content Include="KategoriDetay.aspx" />
+    <Content Include="Kategoriler.aspx" />
     <Content Include="Kullanici.css" />
     <Content Include="resimler\bloggerlar-icin-yemek-fotografciligi.jpg" />
     <Content Include="resimler\pizza.jpg" />
@@ -170,6 +173,13 @@
     </Compile>
     <Compile Include="KategoriDetay.aspx.designer.cs">
       <DependentUpon>KategoriDetay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Kategoriler.aspx.cs">
+      <DependentUpon>Kategoriler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Kategoriler.aspx.designer.cs">
+      <DependentUpon>Kategoriler.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Kullanici.Master.cs">
