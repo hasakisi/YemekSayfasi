@@ -6,15 +6,43 @@
     }
     .auto-style4 {
         text-align: left;
-    }
-    .auto-style5 {
-        text-align: right;
-    }
-</style>
+            width: 225px;
+        }
+        .auto-style6 {
+            font-size: large;
+        }
+        .auto-style7 {
+            width: 50px;
+        }
+        .auto-style8 {
+            width: 53px;
+        }
+        .auto-style9 {
+            text-align: right;
+        }
+        .auto-style10 {
+            height: 26px;
+        }
+        .auto-style11 {
+            border: 1px solid #000000;
+            border-radius: 10px;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <asp:Panel ID="Panel2" runat="server">
-        <span class="auto-style3">Kategoriler Listesi</span></asp:Panel>
+        <table class="auto-style1">
+            <tr>
+                <td class="auto-style7">
+                    <asp:Button ID="Button1" runat="server" CssClass="auto-style6" OnClick="Button1_Click" Text="+" Width="48px" />
+                </td>
+                <td class="auto-style8">
+                    <asp:Button ID="Button2" runat="server" CssClass="auto-style6" OnClick="Button2_Click" Text="-" Width="43px" />
+                </td>
+                <td><span class="auto-style3">Kategoriler Listesi</span></td>
+            </tr>
+        </table>
+    </asp:Panel>
     <asp:Panel ID="Panel1" runat="server">
         <asp:DataList ID="DataList1" runat="server" Width="401px">
             <ItemTemplate>
@@ -23,10 +51,10 @@
                         <td class="auto-style4">
                             <asp:Label ID="Label1" runat="server" CssClass="auto-style3" Text='<%# Eval("KategoriAd") %>'></asp:Label>
                         </td>
-                        <td class="auto-style5">
+                        <td class="auto-style9">
                             <asp:Image ID="Image2" runat="server" Height="30px" ImageUrl="~/icons/delete.png" Width="30px" />
                         </td>
-                        <td class="auto-style5">
+                        <td class="auto-style9">
                             <asp:Image ID="Image3" runat="server" Height="30px" ImageUrl="~/icons/update.png" Width="30px" />
                         </td>
                     </tr>
@@ -34,4 +62,44 @@
             </ItemTemplate>
         </asp:DataList>
 </asp:Panel>
+    <asp:Panel ID="Panel3" runat="server" style="margin-top:15px;">
+        <table class="auto-style1">
+            <tr>
+                <td class="auto-style7">
+                    <asp:Button ID="Button3" runat="server" CssClass="auto-style6"  Text="+" Width="48px" OnClick="Button3_Click" />
+                </td>
+                <td class="auto-style8">
+                    <asp:Button ID="Button4" runat="server" CssClass="auto-style6"  Text="-" Width="43px" OnClick="Button4_Click" />
+                </td>
+                <td><span class="auto-style3">Kategoriler Ekleme</span></td>
+            </tr>
+        </table>
+
+    </asp:Panel>
+    <asp:Panel ID="Panel4" runat="server">
+        <table class="auto-style1">
+            <tr>
+                <td class="auto-style10"></td>
+                <td class="auto-style10"></td>
+            </tr>
+            <tr>
+                <td>Kategori Ad - </td>
+                <td>
+                    <asp:TextBox ID="TextBox1" runat="server" CssClass="fb8"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td>Kategori İkon - </td>
+                <td>
+                    <asp:TextBox ID="TextBox2" runat="server" CssClass="fb8"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>
+                    <asp:Button ID="Button5" runat="server" CssClass="auto-style11" Text="Ekle" Width="166px" />
+                </td>
+            </tr>
+        </table>
+    </asp:Panel>
 </asp:Content>
