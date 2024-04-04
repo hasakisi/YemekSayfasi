@@ -14,7 +14,7 @@
         <ItemTemplate>
             <table class="auto-style7">
                 <tr>
-                    <td><strong>
+                    <td><strong> 
 
                         <a href="YemekDetay.aspx?Yemekid=<%# Eval("Yemekid") %>"><asp:Label ID="Label3" runat="server" CssClass="auto-style8" Text='<%# Eval("YemekAd") %>'></asp:Label>
                         </strong></td></a>     
