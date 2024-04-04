@@ -35,7 +35,7 @@
 <body>
     <form id="form1" runat="server">
         <div style="height: 150px; width: 700px; margin-left: 300px; background-color: #99CCFF;">
-            <asp:Image ID="Image1" runat="server" Height="142px" ImageUrl="~/Header/traditional-thanksgiving-turkey-dinner-above-260nw-1832845288.jpg" Width="694px" />
+            <asp:Image ID="Image1" runat="server" Height="149px" ImageUrl="~/Header/traditional-thanksgiving-turkey-dinner-above-260nw-1832845288.jpg" Width="697px" />
         </div>
         <div style="margin-left: 300px; width: 700px; height: 20px;"></div>
         <div style="margin-left: 300px; background-color: #CC99FF;" class="auto-style6">

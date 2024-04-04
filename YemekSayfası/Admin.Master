@@ -1,0 +1,81 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="YemekSayfası.Admin" %>
+
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link href="Kullanici.css" rel="stylesheet" />
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div style="height: 150px; width: 700px; margin-left: 300px; background-color: #99CCFF;">
+            <asp:Image ID="Image1" runat="server" Height="149px" ImageUrl="~/Header/traditional-thanksgiving-turkey-dinner-above-260nw-1832845288.jpg" Width="697px" />
+        </div>
+        <div style="margin-left: 300px; width: 700px; height: 20px;"></div>
+        <div style="margin-left: 300px; width: 700px; height: auto;">
+
+            <div style="width: 200px; float: left; height: auto; background-color: #ce7171;">
+                <table class="auto-style1">
+                    <tr>
+                        <td>Menüler</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>Kategoriler</td>
+                    </tr>
+                    <tr>
+                        <td>Yemekler</td>
+                    </tr>
+                    <tr>
+                        <td>Yorumlar</td>
+                    </tr>
+                    <tr>
+                        <td>Mesajlar</td>
+                    </tr>
+                    <tr>
+                        <td>Günün Yemeği</td>
+                    </tr>
+                    <tr>
+                        <td>Öneriler</td>
+                    </tr>
+                    <tr>
+                        <td>Hakkımızda</td>
+                    </tr>
+                </table>
+                <br />
+            </div>
+
+            <div style="width: 400px; height: auto; background-color: #ce7171; margin-left: 300px;">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+
+
+
+        </div>
+
+
+
+
+
+
+    </form>
+    <p>
+        &nbsp;&nbsp;&nbsp;
+    </p>
+</body>
+</html>
+
+
