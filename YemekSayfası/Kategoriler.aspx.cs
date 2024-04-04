@@ -44,5 +44,14 @@ namespace YemekSayfası
             Panel4.Visible = false;
 
         }
+
+        protected void btnEkle_Click(object sender, EventArgs e)
+        {
+            SqlCommand cmd = new SqlCommand("INSERT INTO Kategoriler (KategoriAd) VALUES (@p1)",sqlbaglantisi.baglanti());
+            cmd.Parameters.AddWithValue("@p1", TextBox1.Text);
+            cmd.ExecuteNonQuery();
+            sqlbaglantisi.baglanti().Close();
+
+        }
     }
 }

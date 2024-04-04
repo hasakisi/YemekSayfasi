@@ -27,6 +27,12 @@
             border: 1px solid #000000;
             border-radius: 10px;
         }
+        .auto-style12 {
+            border: 2px solid #777;
+            border-radius: 10px;
+            outline: none;
+            margin-left: 0px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -91,13 +97,13 @@
             <tr>
                 <td>Kategori İkon - </td>
                 <td>
-                    <asp:TextBox ID="TextBox2" runat="server" CssClass="fb8"></asp:TextBox>
+                    <asp:FileUpload ID="FileUpload1" runat="server" CssClass="auto-style12" Height="33px" />
                 </td>
             </tr>
             <tr>
                 <td>&nbsp;</td>
                 <td>
-                    <asp:Button ID="Button5" runat="server" CssClass="auto-style11" Text="Ekle" Width="166px" />
+                    <asp:Button ID="btnEkle" runat="server" CssClass="auto-style11" Text="Ekle" Width="166px" OnClick="btnEkle_Click" />
                 </td>
             </tr>
         </table>
