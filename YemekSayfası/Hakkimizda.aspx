@@ -19,6 +19,6 @@
             </ItemTemplate>
         </asp:DataList>
     </div>
-    <br />
+<br />
     <asp:Image ID="Image1" runat="server" Height="194px" ImageUrl="~/resimler/bloggerlar-icin-yemek-fotografciligi.jpg" Width="398px" />
 </asp:Content>
