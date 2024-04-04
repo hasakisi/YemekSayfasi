@@ -46,7 +46,7 @@
         <tr>
             <td>&nbsp;</td>
             <td>
-                <asp:Button ID="Button1" runat="server" CssClass="auto-style4" Height="28px" Text="Güncelle" Width="164px" />
+                <asp:Button ID="Button1" runat="server" CssClass="auto-style4" Height="28px" OnClick="Button1_Click" Text="Güncelle" Width="164px" />
             </td>
         </tr>
     </table>
