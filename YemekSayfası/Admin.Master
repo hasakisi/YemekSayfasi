@@ -40,7 +40,7 @@
                         <td style="background-color: #003399" class="auto-style2"><a href="Kategoriler.aspx">Kategoriler</a></td>
                     </tr>
                     <tr>
-                        <td style="background-color: #003399" class="auto-style2">Yemekler</td>
+                        <td style="background-color: #003399" class="auto-style2"><a href="Yemekler.aspx">Yemekler</a></td>
                     </tr>
                     <tr>
                         <td style="background-color: #003399" class="auto-style2">Yorumlar</td>
