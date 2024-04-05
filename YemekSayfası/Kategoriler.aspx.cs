@@ -11,12 +11,34 @@ namespace YemekSayfası
     public partial class Kategoriler1 : System.Web.UI.Page
     {
         sqlbaglantisi sqlbaglantisi = new sqlbaglantisi();
+        string id = "";
+        string islem = "";
         protected void Page_Load(object sender, EventArgs e)
         {
+
+            if (Page.IsPostBack ==false)
+            {
+                id = Request.QueryString["Kategoriid"];
+                islem = Request.QueryString["islem"];
+            }
+
+
             SqlCommand sqlCommand = new SqlCommand("SELECT * FROM Kategoriler", sqlbaglantisi.baglanti());
             SqlDataReader dataReader = sqlCommand.ExecuteReader();
             DataList1.DataSource = dataReader;
             DataList1.DataBind();
+
+
+            if (islem == "sil")
+            {
+                SqlCommand sil = new SqlCommand("DELETE FROM Kategoriler WHERE Kategoriid = @p1", sqlbaglantisi.baglanti());
+                sil.Parameters.AddWithValue("@p1", id);
+                sil.ExecuteNonQuery();
+                sqlbaglantisi.baglanti().Close();
+
+            }
+
+
 
             Panel1.Visible = false;
             Panel4.Visible = false;
