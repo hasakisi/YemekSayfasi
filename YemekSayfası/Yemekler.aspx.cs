@@ -21,6 +21,15 @@ namespace YemekSayfası
             SqlDataReader dataReader = sqlCommand.ExecuteReader();
             DataList1.DataSource = dataReader;
             DataList1.DataBind();
+
+
+            SqlCommand sqlCommand2 = new SqlCommand("SELECT * FROM Kategoriler", sqlbaglantisi.baglanti());
+            SqlDataReader dr = sqlCommand2.ExecuteReader();
+            DropDownList1.DataTextField = "KategoriAd";
+            DropDownList1.DataValueField = "Kategoriid";
+            DropDownList1.DataSource = dr;
+            DropDownList1.DataBind();
+
         }
 
         protected void Button1_Click(object sender, EventArgs e)

@@ -24,15 +24,8 @@
         .auto-style10 {
             height: 26px;
         }
-        .auto-style11 {
-            border: 1px solid #000000;
-            border-radius: 10px;
-        }
         .auto-style12 {
-            border: 2px solid #777;
-            border-radius: 10px;
-            outline: none;
-            margin-left: 0px;
+            height: 29px;
         }
     </style>
 </asp:Content>
@@ -90,21 +83,34 @@
                 <td class="auto-style10"></td>
             </tr>
             <tr>
-                <td><span class="auto-style3">Kategori Ad </span>&nbsp;</td>
+                <td><span class="auto-style3">Yemek Ad</span>&nbsp;</td>
                 <td>
-                    <asp:TextBox ID="TextBox1" runat="server" CssClass="fb8"></asp:TextBox>
+                    <asp:TextBox ID="TextBox1" runat="server" CssClass="fb8" Width="214px"></asp:TextBox>
                 </td>
             </tr>
             <tr>
-                <td><span class="auto-style3">Kategori İkon</span> - </td>
+                <td class="auto-style12"><span class="auto-style3">Malzemeler</span> </td>
+                <td class="auto-style12">
+                    <asp:TextBox ID="TextBox2" runat="server" CssClass="fb8" Height="69px" TextMode="MultiLine"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style3">Yemek Tarifi</td>
                 <td>
-                    <asp:FileUpload ID="FileUpload1" runat="server" CssClass="auto-style12" Height="33px" />
+                    <asp:TextBox ID="TextBox3" runat="server" CssClass="fb8" Height="116px" TextMode="MultiLine" Width="217px"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style3">Kategori</td>
+                <td>
+                    <asp:DropDownList ID="DropDownList1" runat="server" Width="223px">
+                    </asp:DropDownList>
                 </td>
             </tr>
             <tr>
                 <td>&nbsp;</td>
                 <td>
-                    <asp:Button ID="btnEkle" runat="server" CssClass="auto-style11" Text="Ekle" Width="166px"  />
+                    <asp:Button ID="btnEkle0" runat="server" CssClass="tb5" Height="33px" Text="Ekle" Width="221px" />
                 </td>
             </tr>
         </table>
