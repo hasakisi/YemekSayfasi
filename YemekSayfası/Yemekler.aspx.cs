@@ -31,7 +31,7 @@ namespace YemekSayfası
             SqlCommand sqlCommand = new SqlCommand("SELECT * FROM Yemekler", sqlbaglantisi.baglanti());
             SqlDataReader dataReader = sqlCommand.ExecuteReader();
             DataList1.DataSource = dataReader;
-            DataList1.DataBind();
+            DataList1.DataBind();   
 
 
            

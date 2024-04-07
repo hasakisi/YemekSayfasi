@@ -12,17 +12,22 @@
             height: 29px;
             color: #FFFFFF;
             font-size: medium;
+            width: 110px;
         }
         .auto-style7 {
             font-size: medium;
             color: #FFFFFF;
+            width: 110px;
+        }
+        .auto-style8 {
+            width: 110px;
         }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <table class="auto-style1">
         <tr>
-            <td>&nbsp;</td>
+            <td class="auto-style8">&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
@@ -44,7 +49,7 @@
             </td>
         </tr>
         <tr>
-            <td>&nbsp;</td>
+            <td class="auto-style8">&nbsp;</td>
             <td>
                 <asp:Button ID="Button1" runat="server" CssClass="auto-style4" Height="28px" OnClick="Button1_Click" Text="Güncelle" Width="164px" />
             </td>
