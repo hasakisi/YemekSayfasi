@@ -14,7 +14,7 @@ namespace YemekSayfası
         string id = "";
         protected void Page_Load(object sender, EventArgs e)
         {
-            id = Request.QueryString["Kategoriid"];
+            id = Request.QueryString["Yemekid"];
 
             if (Page.IsPostBack == false)
             {
@@ -30,7 +30,31 @@ namespace YemekSayfası
 
                 }
                 sqlbaglantisi.baglanti().Close();
+
+                if (Page.IsPostBack == false)
+                {
+                    SqlCommand sqlCommand2 = new SqlCommand("SELECT * FROM Kategoriler", sqlbaglantisi.baglanti());
+                    SqlDataReader dr = sqlCommand2.ExecuteReader();
+
+                    DropDownList1.DataTextField = "KategoriAd";
+                    DropDownList1.DataValueField = "Kategoriid";
+                    DropDownList1.DataSource = dr;
+                    DropDownList1.DataBind();
+                }
             }
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            SqlCommand sql = new SqlCommand("UPDATE Yemekler SET YemekAd= @p1, YemekMalzeme=@p2, YemekTarif=@p3,Kategoriid=@p4 WHERE Yemekid=@p5", sqlbaglantisi.baglanti());
+            sql.Parameters.AddWithValue("@p1", TextBox1.Text);
+            sql.Parameters.AddWithValue("@p2", TextBox2.Text);
+            sql.Parameters.AddWithValue("@p3", TextBox3.Text);
+            sql.Parameters.AddWithValue("@p4", DropDownList1.SelectedValue);
+
+            sql.Parameters.AddWithValue("@p5", id);
+            sql.ExecuteNonQuery();
+            sqlbaglantisi.baglanti().Close();
         }
     }
 }
