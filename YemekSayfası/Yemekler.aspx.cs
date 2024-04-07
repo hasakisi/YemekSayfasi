@@ -11,7 +11,8 @@ namespace YemekSayfası
     public partial class Yemekler : System.Web.UI.Page
     {
         sqlbaglantisi sqlbaglantisi = new sqlbaglantisi();
-
+        string islem = "";
+        string id = "";
         protected void Page_Load(object sender, EventArgs e)
         {
             Panel1.Visible = false;
@@ -19,6 +20,10 @@ namespace YemekSayfası
 
             if (Page.IsPostBack == false)
             {
+                id = Request.QueryString["yemekid"];
+                islem = Request.QueryString["islem"];
+
+
                 SqlCommand sqlCommand2 = new SqlCommand("SELECT * FROM Kategoriler", sqlbaglantisi.baglanti());
                 SqlDataReader dr = sqlCommand2.ExecuteReader();
 
@@ -31,10 +36,16 @@ namespace YemekSayfası
             SqlCommand sqlCommand = new SqlCommand("SELECT * FROM Yemekler", sqlbaglantisi.baglanti());
             SqlDataReader dataReader = sqlCommand.ExecuteReader();
             DataList1.DataSource = dataReader;
-            DataList1.DataBind();   
+            DataList1.DataBind();
 
+            if (islem == "sil")
+            {
+                SqlCommand sql = new SqlCommand("DELETE FROM Yemekler WHERE Yemekid=@p1", sqlbaglantisi.baglanti());
+                sql.Parameters.AddWithValue("@p1", id);
+                sql.ExecuteNonQuery();
+                sqlbaglantisi.baglanti().Close();
+            }
 
-           
 
         }
 
@@ -66,6 +77,12 @@ namespace YemekSayfası
             sqlCommand2.Parameters.AddWithValue("@p3", TextBox3.Text);
             sqlCommand2.Parameters.AddWithValue("@p4", DropDownList1.SelectedValue);
             sqlCommand2.ExecuteNonQuery();
+            sqlbaglantisi.baglanti().Close();
+
+
+            SqlCommand command = new SqlCommand("update kategoriler set kategoriadet=kategoriadet+1 where kategoriid=@p1",sqlbaglantisi.baglanti());
+            command.Parameters.AddWithValue("@p1", DropDownList1.SelectedValue);
+            command.ExecuteNonQuery();
             sqlbaglantisi.baglanti().Close();
 
         }
