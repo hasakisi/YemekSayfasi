@@ -17,18 +17,38 @@ namespace YemekSayfası
         {
             yorumid = Request.QueryString["Yorumid"];
 
-            SqlCommand sqlCommand = new SqlCommand("SELECT YorumAdSoyad,YorumMail,Yorumicerik,YemekAd FROM Yorumlar INNER JOIN Yemekler ON Yorumlar.Yemekid=Yemekler.yemekid WHERE Yorumid = @p1", sqlbaglantisi.baglanti());
-            sqlCommand.Parameters.AddWithValue("@p1", yorumid);
-            SqlDataReader reader = sqlCommand.ExecuteReader();
-            while (reader.Read())
+            if (Page.IsPostBack == false)
             {
-                TextBox1.Text = reader[0].ToString();
-                TextBox2.Text = reader[1].ToString();
-                TextBox3.Text = reader[2].ToString();
-                TextBox4.Text = reader[3].ToString();
-                
+
+
+
+
+                SqlCommand sqlCommand = new SqlCommand("SELECT YorumAdSoyad,YorumMail,Yorumicerik,YemekAd FROM Yorumlar INNER JOIN Yemekler ON Yorumlar.Yemekid=Yemekler.yemekid WHERE Yorumid = @p1", sqlbaglantisi.baglanti());
+                sqlCommand.Parameters.AddWithValue("@p1", yorumid);
+                SqlDataReader reader = sqlCommand.ExecuteReader();
+                while (reader.Read())
+                {
+                    TextBox1.Text = reader[0].ToString();
+                    TextBox2.Text = reader[1].ToString();
+                    TextBox3.Text = reader[2].ToString();
+                    TextBox4.Text = reader[3].ToString();
+
+                }
+                sqlbaglantisi.baglanti().Close();
             }
-            sqlbaglantisi.baglanti().Close();
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            SqlCommand sql = new SqlCommand("UPDATE Yorumlar Set Yorumicerik=@p1,YorumOnay=@p2 WHERE Yorumid=@p3", sqlbaglantisi.baglanti());
+            sql.Parameters.AddWithValue("@p1", TextBox3.Text);
+            sql.Parameters.AddWithValue("@p2", "True");
+            sql.Parameters.AddWithValue("@p3", yorumid);
+            sql.ExecuteNonQuery();
+                sqlbaglantisi.baglanti().Close();
+
+
+
         }
     }
 }

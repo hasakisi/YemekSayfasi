@@ -43,7 +43,7 @@
         <tr>
             <td>&nbsp;</td>
             <td>
-                <asp:Button ID="Button1" runat="server" CssClass="fb8" Height="44px" Text="Onayla" Width="191px" />
+                <asp:Button ID="Button1" runat="server" CssClass="fb8" Height="44px" OnClick="Button1_Click" Text="Onayla" Width="191px" />
             </td>
         </tr>
     </table>
