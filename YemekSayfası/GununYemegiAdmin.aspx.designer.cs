@@ -11,7 +11,7 @@ namespace YemekSayfası
 {
 
 
-    public partial class Mesajlar
+    public partial class GununYemegiAdmin
     {
 
         /// <summary>
