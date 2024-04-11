@@ -14,10 +14,17 @@ namespace YemekSayfası
         protected void Page_Load(object sender, EventArgs e)
         {
             Panel1.Visible = false;
-            SqlCommand sqlCommand = new SqlCommand("SELECT * FROM Yorumlar", sqlbaglantisi.baglanti());
+            Panel4.Visible = false;
+
+            SqlCommand sqlCommand = new SqlCommand("SELECT * FROM Yorumlar WHERE YorumOnay = 1", sqlbaglantisi.baglanti());
             SqlDataReader reader = sqlCommand.ExecuteReader();
             DataList1.DataSource = reader;
             DataList1.DataBind();
+
+            SqlCommand sqlCommand2 = new SqlCommand("SELECT * FROM Yorumlar WHERE YorumOnay = 0", sqlbaglantisi.baglanti());
+            SqlDataReader reader2 = sqlCommand2.ExecuteReader();
+            DataList2.DataSource = reader2;
+            DataList2.DataBind();
 
         }
 
@@ -29,6 +36,16 @@ namespace YemekSayfası
         protected void Button2_Click(object sender, EventArgs e)
         {
             Panel1.Visible = false;
+        }
+
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+            Panel4.Visible=true;
+        }
+
+        protected void Button4_Click(object sender, EventArgs e)
+        {
+            Panel4.Visible = false;
         }
     }
 }
