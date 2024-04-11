@@ -46,7 +46,7 @@
                         <td style="background-color: #003399" class="auto-style2"><a href="Yorumlar.aspx">Yorumlar</a></td>
                     </tr>
                     <tr>
-                        <td style="background-color: #003399" class="auto-style2">Mesajlar</td>
+                        <td style="background-color: #003399" class="auto-style2"><a href="Mesajlar.aspx">Mesajlar</a></td>
                     </tr>
                     <tr>
                         <td style="background-color: #003399" class="auto-style2">Günün Yemeği</td>
