@@ -43,7 +43,7 @@
                         <td style="background-color: #003399" class="auto-style2"><a href="Yemekler.aspx">Yemekler</a></td>
                     </tr>
                     <tr>
-                        <td style="background-color: #003399" class="auto-style2">Yorumlar</td>
+                        <td style="background-color: #003399" class="auto-style2"><a href="Yorumlar.aspx">Yorumlar</a></td>
                     </tr>
                     <tr>
                         <td style="background-color: #003399" class="auto-style2">Mesajlar</td>
