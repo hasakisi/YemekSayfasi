@@ -25,7 +25,7 @@ namespace YemekSayfası
                 {
                     TextBox1.Text = reader[1].ToString();
                     TextBox2.Text = reader[2].ToString();
-                    TextBox2.Text = reader[2].ToString();
+                    TextBox3.Text = reader[3].ToString();
 
 
                 }

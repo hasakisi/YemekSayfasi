@@ -117,6 +117,7 @@
     <Content Include="KategoriDetay.aspx" />
     <Content Include="Kategoriler.aspx" />
     <Content Include="Kullanici.css" />
+    <Content Include="MesajGonderen.aspx" />
     <Content Include="Mesajlar.aspx" />
     <Content Include="resimler\bloggerlar-icin-yemek-fotografciligi.jpg" />
     <Content Include="resimler\pizza.jpg" />
@@ -203,6 +204,13 @@
     </Compile>
     <Compile Include="Kategoriler.aspx.designer.cs">
       <DependentUpon>Kategoriler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MesajGonderen.aspx.cs">
+      <DependentUpon>MesajGonderen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MesajGonderen.aspx.designer.cs">
+      <DependentUpon>MesajGonderen.aspx</DependentUpon>
     </Compile>
     <Compile Include="Mesajlar.aspx.cs">
       <DependentUpon>Mesajlar.aspx</DependentUpon>

@@ -34,7 +34,7 @@
                 <td class="auto-style8">
                     <asp:Button ID="Button2" runat="server" CssClass="auto-style6" Text="-" Width="43px" OnClick="Button2_Click"  />
                 </td>
-                <td><span class="auto-style3">Onaylanan Yorumlar Listesi</span></td>
+                <td><span class="auto-style3">Onaylanan Mesajlar Listesi</span></td>
             </tr>
         </table>
     </asp:Panel>
@@ -47,7 +47,7 @@
                             <asp:Label ID="Label1" runat="server" CssClass="auto-style3" Text='<%# Eval("MesajGonderen") %>'></asp:Label>
                         </td>
                         <td class="auto-style9">
-                            <asp:Image ID="Image2" runat="server" Height="30px" ImageUrl="~/icons/book_10446347.png" Width="30px" />
+                            <a href="MesajGonderen.aspx?Mesajid=<%#Eval("Mesajid") %>">   <asp:Image ID="Image2" runat="server" Height="30px" ImageUrl="~/icons/book_10446347.png" Width="30px" /></a>
                         </td>
                     </tr>
                 </table>
