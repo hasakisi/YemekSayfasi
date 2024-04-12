@@ -56,5 +56,20 @@ namespace YemekSayfası
             sql.ExecuteNonQuery();
             sqlbaglantisi.baglanti().Close();
         }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            SqlCommand sql = new SqlCommand("UPDATE Yemekler SET durum=0", sqlbaglantisi.baglanti());
+            sql.ExecuteNonQuery();
+            sqlbaglantisi.baglanti().Close();
+
+
+            SqlCommand sql2 = new SqlCommand("UPDATE Yemekler SET durum=1 WHERE Yemekid=@p1", sqlbaglantisi.baglanti());
+            sql2.Parameters.AddWithValue("@p1", id);
+
+            sql2.ExecuteNonQuery();
+            sqlbaglantisi.baglanti().Close();
+
+        }
     }
 }
