@@ -20,7 +20,7 @@
             <tr>
                 <td class="auto-style9"><strong>Tarif Ad </strong></td>
                 <td>
-                    <asp:TextBox ID="TextBox1" runat="server" Width="211px"></asp:TextBox>
+                    <asp:TextBox ID="TextBox1" runat="server" Width="213px"></asp:TextBox>
                 </td>
             </tr>
             <tr>
@@ -54,9 +54,16 @@
                 </td>
             </tr>
             <tr>
+                <td class="auto-style9"><strong>Kategori</strong></td>
+                <td>
+                    <asp:DropDownList ID="DropDownList1" runat="server" Width="220px">
+                    </asp:DropDownList>
+                </td>
+            </tr>
+            <tr>
                 <td>&nbsp;</td>
                 <td>
-                    <asp:Button ID="Button2" runat="server" CssClass="fb8" Height="35px" Text="Onayla" Width="236px" />
+                    <asp:Button ID="Button2" runat="server" CssClass="fb8" Height="35px" OnClick="Button2_Click" Text="Onayla" Width="236px" />
                 </td>
             </tr>
         </table>

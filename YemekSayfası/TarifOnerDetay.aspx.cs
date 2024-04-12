@@ -33,7 +33,36 @@ namespace YemekSayfası
 
                 }
                 sqlbaglantisi.baglanti().Close();
+
+             
+                            
+                                SqlCommand sqlCommand2 = new SqlCommand("SELECT * FROM Kategoriler", sqlbaglantisi.baglanti());
+                                SqlDataReader dr = sqlCommand2.ExecuteReader();
+
+                                DropDownList1.DataTextField = "KategoriAd";
+                                DropDownList1.DataValueField = "Kategoriid";
+                                DropDownList1.DataSource = dr;
+                                DropDownList1.DataBind();
+                            
+
             }
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            SqlCommand sqlCommand = new SqlCommand("UPDATE Tarifler SET TarifDurum=1 WHERE Tarifid=@p1",sqlbaglantisi.baglanti());
+            sqlCommand.Parameters.AddWithValue("@p1", id);
+            sqlCommand.ExecuteNonQuery();
+            sqlbaglantisi.baglanti().Close();
+
+            SqlCommand sql = new SqlCommand("INSERT INTO Yemekler (YemekAd,YemekMalzeme,YemekTarif,Kategoriid) VALUES(@p1,@p2,@p3,@p4)",sqlbaglantisi.baglanti());
+            sql.Parameters.AddWithValue("@p1", TextBox1.Text);
+            sql.Parameters.AddWithValue("@p2", TextBox2.Text);
+            sql.Parameters.AddWithValue("@p3", TextBox3.Text);
+            sql.Parameters.AddWithValue("@p4", DropDownList1.SelectedValue);
+            sql.ExecuteNonQuery();
+            sqlbaglantisi.baglanti().Close();
+
         }
     }
 }
