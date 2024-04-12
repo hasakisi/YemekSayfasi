@@ -22,6 +22,7 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    &nbsp;&nbsp;&nbsp;
     <asp:Panel ID="Panel2" runat="server">
         <table class="auto-style1">
             <tr>
@@ -41,7 +42,7 @@
          <table class="auto-style1">
              <tr>
                  <td class="auto-style4">
-                     <asp:Label ID="Label1" runat="server" CssClass="auto-style3" Text='<%# Eval("YorumAdSoyad") %>'></asp:Label>
+                     <asp:Label ID="Label1" runat="server" CssClass="auto-style3" Text='<%# Eval("YemekAd") %>'></asp:Label>
                  </td>
                  <td class="auto-style9">
                      <asp:Image ID="Image3" runat="server" Height="30px" ImageUrl="~/icons/convenient_7959280.png" Width="30px" />

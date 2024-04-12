@@ -46,11 +46,15 @@ namespace YemekSayfası
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            SqlCommand sql = new SqlCommand("UPDATE Yemekler SET YemekAd= @p1, YemekMalzeme=@p2, YemekTarif=@p3,Kategoriid=@p4 WHERE Yemekid=@p5", sqlbaglantisi.baglanti());
+
+            FileUpload1.SaveAs(Server.MapPath("/resimler/" + FileUpload1.FileName));
+
+            SqlCommand sql = new SqlCommand("UPDATE Yemekler SET YemekAd= @p1, YemekMalzeme=@p2, YemekTarif=@p3,Kategoriid=@p4, YemekResim=@p6 WHERE Yemekid=@p5", sqlbaglantisi.baglanti());
             sql.Parameters.AddWithValue("@p1", TextBox1.Text);
             sql.Parameters.AddWithValue("@p2", TextBox2.Text);
             sql.Parameters.AddWithValue("@p3", TextBox3.Text);
             sql.Parameters.AddWithValue("@p4", DropDownList1.SelectedValue);
+            sql.Parameters.AddWithValue("@p6", "~/resimler/" + FileUpload1.FileName);
 
             sql.Parameters.AddWithValue("@p5", id);
             sql.ExecuteNonQuery();

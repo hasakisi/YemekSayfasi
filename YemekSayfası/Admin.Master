@@ -18,6 +18,13 @@
             font-size: large;
             color: #FFFFFF;
         }
+        .auto-style3 {
+            color: #99FF99;
+        }
+        .auto-style4 {
+            font-size: large;
+            
+        }
     </style>
 </head>
 <body>
@@ -34,25 +41,25 @@
                         <td style="background-color: #003399" class="auto-style2">Menüler</td>
                     </tr>
                     <tr>
-                        <td style="background-color: #003399" class="auto-style2">&nbsp;</td>
+                        <td style="background-color: #003399" class="auto-style4">&nbsp;</td>
                     </tr>
                     <tr>
-                        <td style="background-color: #003399" class="auto-style2"><a href="Kategoriler.aspx">Kategoriler</a></td>
+                        <td style="background-color: #003399" class="auto-style4"><a href="Kategoriler.aspx" class="auto-style3">Kategoriler</a></td>
                     </tr>
                     <tr>
-                        <td style="background-color: #003399" class="auto-style2"><a href="Yemekler.aspx">Yemekler</a></td>
+                        <td style="background-color: #003399" class="auto-style4"><a href="Yemekler.aspx" class="auto-style3">Yemekler</a></td>
                     </tr>
                     <tr>
-                        <td style="background-color: #003399" class="auto-style2"><a href="Yorumlar.aspx">Yorumlar</a></td>
+                        <td style="background-color: #003399" class="auto-style4"><a href="Yorumlar.aspx" class="auto-style3">Yorumlar</a></td>
                     </tr>
                     <tr>
-                        <td style="background-color: #003399" class="auto-style2"><a href="Mesajlar.aspx">Mesajlar</a></td>
+                        <td style="background-color: #003399" class="auto-style4"><a href="Mesajlar.aspx" class="auto-style3">Mesajlar</a></td>
                     </tr>
                     <tr>
-                        <td style="background-color: #003399" class="auto-style2"> <a href="GununYemegi.aspx">Günün Yemeği</a> </td>
+                        <td style="background-color: #003399" class="auto-style4"> <a href="GununYemegi.aspx" class="auto-style3">Günün Yemeği</a><span class="auto-style3"> </span> </td>
                     </tr>
                     <tr>
-                        <td style="background-color: #003399" class="auto-style2"> <a href="Tarifler.aspx">Tarifler</a></td>
+                        <td style="background-color: #003399" class="auto-style4"> <a href="Tarifler.aspx" class="auto-style3">Tarifler</a></td>
                     </tr>
                     <tr>
                         <td style="background-color: #003399" class="auto-style2">Hakkımızda</td>

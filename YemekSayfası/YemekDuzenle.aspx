@@ -65,6 +65,12 @@
             </td>
         </tr>
         <tr>
+            <td class="auto-style8">Yemek Resim</td>
+            <td>
+                <asp:FileUpload ID="FileUpload1" runat="server" />
+            </td>
+        </tr>
+        <tr>
             <td>&nbsp;</td>
             <td>
                 <asp:Button ID="Button1" runat="server" CssClass="auto-style4" Height="28px" OnClick="Button1_Click" Text="Güncelle" Width="225px" />
