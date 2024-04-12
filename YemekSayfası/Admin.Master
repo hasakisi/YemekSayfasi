@@ -52,7 +52,7 @@
                         <td style="background-color: #003399" class="auto-style2"> <a href="GununYemegi.aspx">Günün Yemeği</a> </td>
                     </tr>
                     <tr>
-                        <td style="background-color: #003399" class="auto-style2">Öneriler</td>
+                        <td style="background-color: #003399" class="auto-style2"> <a href="Tarifler.aspx">Tarifler</a></td>
                     </tr>
                     <tr>
                         <td style="background-color: #003399" class="auto-style2">Hakkımızda</td>
