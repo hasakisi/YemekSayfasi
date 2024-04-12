@@ -109,6 +109,7 @@
     <Content Include="Hakkimizda.aspx" />
     <Content Include="Header\traditional-thanksgiving-turkey-dinner-above-260nw-1832845288.jpg" />
     <Content Include="icons\book_10446347.png" />
+    <Content Include="icons\contract_684872.png" />
     <Content Include="icons\convenient_7959280.png" />
     <Content Include="icons\update.png" />
     <Content Include="icons\delete.png" />
@@ -121,6 +122,7 @@
     <Content Include="Mesajlar.aspx" />
     <Content Include="resimler\bloggerlar-icin-yemek-fotografciligi.jpg" />
     <Content Include="resimler\pizza.jpg" />
+    <Content Include="Tarifler.aspx" />
     <Content Include="TarifOner.aspx" />
     <Content Include="Web.config" />
     <Content Include="YemekDetay.aspx" />
@@ -228,6 +230,13 @@
       <DependentUpon>Kullanici.Master</DependentUpon>
     </Compile>
     <Compile Include="sqlbaglantisi.cs" />
+    <Compile Include="Tarifler.aspx.cs">
+      <DependentUpon>Tarifler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tarifler.aspx.designer.cs">
+      <DependentUpon>Tarifler.aspx</DependentUpon>
+    </Compile>
     <Compile Include="TarifOner.aspx.cs">
       <DependentUpon>TarifOner.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

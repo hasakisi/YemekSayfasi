@@ -1,6 +1,7 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin.Master" AutoEventWireup="true" CodeBehind="Mesajlar.aspx.cs" Inherits="YemekSayfası.Mesajlar" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin.Master" AutoEventWireup="true" CodeBehind="Tarifler.aspx.cs" Inherits="YemekSayfası.Tarifler" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
+
 
 
         .auto-style7 {
@@ -34,7 +35,7 @@
                 <td class="auto-style8">
                     <asp:Button ID="Button2" runat="server" CssClass="auto-style6" Text="-" Width="43px" OnClick="Button2_Click"  />
                 </td>
-                <td><span class="auto-style3">Mesajlar Listesi</span></td>
+                <td><span class="auto-style3">Tarif Listesi</span></td>
             </tr>
         </table>
     </asp:Panel>
@@ -44,14 +45,14 @@
                 <table class="auto-style1">
                     <tr>
                         <td class="auto-style4">
-                            <asp:Label ID="Label1" runat="server" CssClass="auto-style3" Text='<%# Eval("MesajGonderen") %>'></asp:Label>
+                            <asp:Label ID="Label1" runat="server" CssClass="auto-style3" Text='<%# Eval("TarifAd") %>'></asp:Label>
                         </td>
                         <td class="auto-style9">
-                            <a href="MesajGonderen.aspx?Mesajid=<%#Eval("Mesajid") %>">   <asp:Image ID="Image2" runat="server" Height="30px" ImageUrl="~/icons/book_10446347.png" Width="30px" /></a>
-                        </td>
+                             <asp:Image ID="Image2" runat="server" Height="30px" ImageUrl="~/icons/contract_684872.png" Width="30px" />
+                            </td>
                     </tr>
                 </table>
             </ItemTemplate>
         </asp:DataList>
     </asp:Panel>
-        </asp:Content>
+</asp:Content>
